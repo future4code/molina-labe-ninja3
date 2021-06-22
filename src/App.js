@@ -1,9 +1,12 @@
 import React from "react";
-import { AppContainer } from "./componentsBruno/AppContainer";
-import CardAulas from "./componentsBruno/CardAulas/CardAulas";
+import Consultoria from "./componentsCarlos/Consultoria.js";
+import Header from "./componentsCarlos/Header";
 
 function App() {
-  return <CardAulas />;
+  return <div>
+  <Header/>
+  <Consultoria />
+  </div>
 }
 
 export default App;
