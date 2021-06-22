@@ -1,13 +1,12 @@
 import React from "react";
-import AppContainer from "./ComponentesHome/AppContainer";
 import CardAulas from "./componentsBruno/CardAulas/CardAulas";
 import CardsCategorias from "./ComponentesHome/CardsCategorias";
+import CardDesign from "./ComponentesSuzana/CardDesign";
 import styled from 'styled-components'
 
 const AppContainerHome = styled.div `
 	
-	height: 100rem;
-	
+	height: 200rem;
 
  `
 
@@ -18,10 +17,10 @@ export default class App extends React.Component {
 		return (
 			<AppContainerHome>
 
-			<AppContainer/>
-
 			<CardAulas />
+			<CardDesign />
 			<CardsCategorias/>
+			
 
 			</AppContainerHome>
 		) 

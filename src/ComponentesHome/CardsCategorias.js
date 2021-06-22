@@ -11,7 +11,7 @@ const CardsContainer = styled.div `
  flex-direction: row;
  gap: 30px;
  position: relative;
- top: 50px;
+ top: 150px;
  width: 101%;
  background-color: blueviolet;
  
