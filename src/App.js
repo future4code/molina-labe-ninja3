@@ -12,7 +12,7 @@ export default class App extends React.Component {
 	render () {
 		return (
 
-			
+			<div>
 
 			<CardAulas />
 			<CardDesign />
@@ -20,11 +20,9 @@ export default class App extends React.Component {
 			<CardAutos />
 
 			<CardsCategorias/>
-			
 
-			</>
+			</div>
 
-			
 		) 
 	}
 	
