@@ -4,6 +4,7 @@ import CardAutos from "./ComponentsAutos/CardAutos";
 import CardsCategorias from "./ComponentesHome/CardsCategorias";
 import CardDesign from "./ComponentesSuzana/CardDesign";
 import styled from 'styled-components'
+import Header from "./componentsCarlos/Header";
 
 
 export default class App extends React.Component {
@@ -13,12 +14,8 @@ export default class App extends React.Component {
 		return (
 
 			<div>
-
-			<CardAulas />
-			<CardDesign />
-			<CardAulas />
-			<CardAutos />
-
+<Header/>
+			
 			<CardsCategorias/>
 
 			</div>
