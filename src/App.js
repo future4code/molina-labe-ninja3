@@ -1,10 +1,9 @@
-import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import React from "react";
+import { AppContainer } from "./componentsBruno/AppContainer";
+import CardAulas from "./componentsBruno/CardAulas/CardAulas";
 
 function App() {
-	return (
-        <AppContainer />
-	)
+  return <CardAulas />;
 }
 
-export default App
+export default App;
