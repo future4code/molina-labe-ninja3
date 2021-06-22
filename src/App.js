@@ -1,10 +1,18 @@
 import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import Footer from './componentsJoice/footer/Footer'
 
-function App() {
-	return (
-        <AppContainer />
-	)
+export default class  App extends React.Component {
+	render () {
+
+		return (
+			<div className="App">
+			
+			<Footer/>
+			</div>
+		)	
+
+	}
+	
 }
 
-export default App
+
