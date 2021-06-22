@@ -1,12 +1,31 @@
 import React from "react";
-import Consultoria from "./componentsCarlos/Consultoria.js";
-import Header from "./componentsCarlos/Header";
+import CardAulas from "./componentsBruno/CardAulas/CardAulas";
+import CardAutos from "./ComponentsAutos/CardAutos";
+import CardsCategorias from "./ComponentesHome/CardsCategorias";
+import CardDesign from "./ComponentesSuzana/CardDesign";
+import styled from 'styled-components'
 
-function App() {
-  return <div>
-  <Header/>
-  <Consultoria />
-  </div>
+
+export default class App extends React.Component {
+
+
+	render () {
+		return (
+
+			<div>
+
+			<CardAulas />
+			<CardDesign />
+			<CardAulas />
+			<CardAutos />
+
+			<CardsCategorias/>
+
+			</div>
+
+		) 
+	}
+	
+  
+
 }
-
-export default App;
