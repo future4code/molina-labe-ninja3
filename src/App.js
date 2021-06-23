@@ -5,6 +5,7 @@ import CardsCategorias from "./ComponentesHome/CardsCategorias";
 import CardDesign from "./ComponentesSuzana/CardDesign";
 import styled from 'styled-components'
 import Header from "./componentsCarlos/Header";
+import Footer from './componentsJoice/footer/Footer'
 
 
 export default class App extends React.Component {
@@ -14,9 +15,10 @@ export default class App extends React.Component {
 		return (
 
 			<div>
-<Header/>
+			<Header/>
 			
 			<CardsCategorias/>
+			<Footer/>
 
 			</div>
 
