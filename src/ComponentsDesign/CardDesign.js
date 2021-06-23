@@ -14,7 +14,9 @@ export default class CardDesign extends React.Component {
   render() {
     return (
       <CardContainer>
-        <HeaderCardDesign />
+        <HeaderCardDesign
+          irParaCardsCategorias={this.props.irParaCardsCategorias}
+        />
         <BodyCardDesign />
       </CardContainer>
     );

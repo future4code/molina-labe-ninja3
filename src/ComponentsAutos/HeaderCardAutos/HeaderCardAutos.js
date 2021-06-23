@@ -13,8 +13,12 @@ export default class HeaderCardAutos extends React.Component {
   render() {
     return (
       <HeaderAutos>
+        <button onClick={this.props.irParaCardsCategorias}>HOME</button>
         <h1>Precisando de Serviços para Automóveis?</h1>
-        <h2>Todos os profissionais são avaliados por clientes, e você só negocia com os melhores!</h2>
+        <h2>
+          Todos os profissionais são avaliados por clientes, e você só negocia
+          com os melhores!
+        </h2>
       </HeaderAutos>
     );
   }

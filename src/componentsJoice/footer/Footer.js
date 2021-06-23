@@ -6,14 +6,12 @@ const Container = styled.div`
   position: relative;
   bottom: 0;
   max-width: 100vw;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: #F8F8F8;
   margin-top: 50px;
-`
+`;
 
 const Main = styled.div`
   display: grid;
@@ -21,7 +19,7 @@ const Main = styled.div`
   width: 90vw;
   margin-top: 1%;
   margin-bottom: 1%;
-`
+`;
 
 const Logo = styled.div`
   display: flex;
@@ -29,38 +27,38 @@ const Logo = styled.div`
   justify-content: center;
   font-size: 1.5em;
   color: black;
-`
+`;
 
 const Title = styled.h1`
   font-size: 1.5rem;
   color: black;
   margin-bottom: 2%;
-`
+`;
 
 const Text = styled.p`
   font-size: 0.8rem;
   color: #4F0000;
   text-align: justify;
-`
+`;
 
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const TextContact = styled.div`
   width: 40%;
   align-items: center;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const SocialMidia = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const IconSocial = styled.div`
   height: 10vh;
@@ -68,17 +66,16 @@ const IconSocial = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-`
+`;
 
 const Link = styled.a`
   margin-left: 2%;
-`
+`;
 
 const Image = styled.img`
   height: 45%;
-  margin-top: 5%;
-  
-`
+  margin-top: 5%;  
+`;
 
 const Direitos = styled.div`
   display: flex;
@@ -86,7 +83,7 @@ const Direitos = styled.div`
   width: 90%;
   align-items: center;
   margin: 1%;
-`
+`;
 
 
 export default class Footer extends React.Component {

@@ -14,7 +14,9 @@ export default class CardAulas extends React.Component {
   render() {
     return (
       <CardContainer>
-        <HeaderCardAulas />
+        <HeaderCardAulas
+          irParaCardsCategorias={this.props.irParaCardsCategorias}
+        />
         <BodyCardAulas />
       </CardContainer>
     );
