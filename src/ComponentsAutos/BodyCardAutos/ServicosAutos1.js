@@ -21,7 +21,6 @@ export default class ServicosCard extends React.Component {
   render() {
     return (
       <ServicosContainer>
-        <ImagemAutos src={imagemAlarme} />
         <h1>Alarme</h1>
         <a>Preço</a>
         <a>Método de pagamento</a>

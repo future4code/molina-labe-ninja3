@@ -8,24 +8,18 @@ import styled from "styled-components";
 
 const CardsContainer = styled.div`
   display: flex;
-  flex-direction: row;
   gap: 30px;
-  position: relative;
-  top: 150px;
-  width: 101%;
-  background-color: blueviolet;
+  width: 100vw;
+  height: 100vh;
 
   h2 {
-    position: relative;
-    left: 600px;
-    top: 180px;
+    text-align: center;
+    background-color: red;
+    height: 30px;
   }
 
   img {
     width: 120px;
-    position: relative;
-    top: 25px;
-    left: 40px;
   }
 `;
 const Card1 = styled.div`
@@ -84,40 +78,48 @@ const Card5 = styled.div`
   cursor: pointer;
 `;
 
+const ButtonStyle = styled.button`
+  height: 180px;
+  width: 200px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  border-radius: 10px;
+`;
+
 export default class CardsCategorias extends React.Component {
   render() {
     return (
-      <div>
-        <CardsContainer>
-          <h2>Todas as Categorias de Serviços </h2>
-
-          <Card1>
-            <button onClick={this.props.irParaCardAulas}>
-              <img src={aulas} alt="icone-aulas" />
-            </button>
-          </Card1>
-          <Card2>
-            <button onClick={this.props.irParaCardAutos}>
-              <img src={autos} alt="icone-autos" />
-            </button>
-          </Card2>
-          <Card3>
-            <button onClick={this.props.irParaConsultoria}>
-              <img src={consultoria} alt="icone-consultoria" />
-            </button>
-          </Card3>
-          <Card4>
-            <button onClick={this.props.irParaCardDesign}>
-              <img src={designetecnologia} alt="icone-designetecnologia" />
-            </button>
-          </Card4>
-          <Card5>
-            <button>
-              <img src={modaebeleza} alt="icone-modaebeleza" />
-            </button>
-          </Card5>
-        </CardsContainer>
-      </div>
+      <CardsContainer>
+        <h2>Todas as Categorias de Serviços</h2>
+        <Card1>
+          <ButtonStyle onClick={this.props.irParaCardAulas}>
+            <img src={aulas} alt="icone-aulas" />
+          </ButtonStyle>
+        </Card1>
+        <Card2>
+          <ButtonStyle onClick={this.props.irParaCardAutos}>
+            <img src={autos} alt="icone-autos" />
+          </ButtonStyle>
+        </Card2>
+        <Card3>
+          <ButtonStyle onClick={this.props.irParaCardConsultoria}>
+            <img src={consultoria} alt="icone-consultoria" />
+          </ButtonStyle>
+        </Card3>
+        <Card4>
+          <ButtonStyle onClick={this.props.irParaCardDesign}>
+            <img src={designetecnologia} alt="icone-designetecnologia" />
+          </ButtonStyle>
+        </Card4>
+        <Card5>
+          <ButtonStyle>
+            <img src={modaebeleza} alt="icone-modaebeleza" />
+          </ButtonStyle>
+        </Card5>
+      </CardsContainer>
     );
   }
 }
