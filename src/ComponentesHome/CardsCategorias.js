@@ -5,6 +5,14 @@ import consultoria from './images/consultoria.svg';
 import modaebeleza from './images/modaebeleza.svg';
 import designetecnologia from './images/designetecnologia.svg';
 import styled from 'styled-components'
+import Consultorias from '../componentsCarlos/Consultorias';
+
+const H2 = styled.h2`
+
+	position: relative;
+ 	left: 600px;
+	top: 180px;
+    `
 
 const CardsContainer = styled.div `
  display: flex;
@@ -15,11 +23,9 @@ const CardsContainer = styled.div `
  width: 101%;
  background-color: blueviolet;
  
- h2{
-	position: relative;
- 	left: 600px;
-	top: 180px;
- }
+ 
+
+ 
 
  img {
 	width: 120px;
@@ -93,11 +99,12 @@ export default class CardsCategorias extends React.Component {
 
 			<CardsContainer>
 
-				<h2>Todas as Categorias de Serviços </h2>
+				<H2>Todas as Categorias de Serviços </H2>
 
 				<Card1><img src={aulas} alt= "icone-aulas" /></Card1>
 				<Card2><img src={autos} alt= "icone-autos" /></Card2>
-				<Card3><img src={consultoria} alt= "icone-consultoria" /></Card3>
+				<Card3><Consultorias></Consultorias>
+</Card3>
 				<Card4><img src={designetecnologia} alt= "icone-designetecnologia" /></Card4>
 				<Card5><img src={modaebeleza} alt= "icone-modaebeleza" /></Card5>
 				

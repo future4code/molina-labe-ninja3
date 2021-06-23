@@ -6,6 +6,7 @@ import imagemCont from './cont.jpg';
 const Servicos = styled.div`
   display: flex;
 
+
 `
 
 
@@ -25,8 +26,9 @@ const ServicosContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 70vh;
+
 `;
 
 const Imagem = styled.img`
@@ -38,19 +40,28 @@ max-height: 45%;
 
 const Imagem2 = styled.img`
   display: flex;
-width: 45%;
-max-height: 40%;
+width: 45vw;
+max-height: 40vh;
 margin-top: 30px;
 `;
+
+const Card = styled.div`
+position: absolute;
+left: -300%;
+  width: 70vw;
+
+   
+`
+
 
 export default class Consultoria extends React.Component {
 
 
     render() {
-        return (<div>
+        return (<Card>
             <HeaderCard>
                 <h1>Precisando de consultores?</h1>
-        <h2>Temos os melhores profissionais, mais bem avaliados!!</h2>
+        <h2 >Temos os melhores profissionais, mais bem avaliados!!</h2>
             </HeaderCard>
 <Servicos>
 <ServicosContainer>
@@ -73,6 +84,6 @@ export default class Consultoria extends React.Component {
 <button>Contratar</button>
 </ServicosContainer>
 </Servicos>
-</div>
+</Card>
 
         )}}
