@@ -13,6 +13,7 @@ export default class HeaderCardAulas extends React.Component {
   render() {
     return (
       <HeaderAulas>
+        <button onClick={this.props.irParaCardsCategorias}>HOME</button>
         <h1>Precisando de professores?</h1>
         <h2>Temos os melhores profissionais, mais bem avaliados!!</h2>
       </HeaderAulas>
