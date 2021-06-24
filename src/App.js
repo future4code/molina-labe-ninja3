@@ -4,6 +4,7 @@ import CardAutos from "./ComponentsAutos/CardAutos";
 import CardsCategorias from "./ComponentesHome/CardsCategorias";
 import CardConsultoria from "./ComponentsConsultoria/CardConsultoria";
 import CardDesign from "./ComponentsDesign/CardDesign";
+import CardModaeBeleza from "./ComponentsModaeBeleza/CardModaeBeleza"
 import Header from "./ComponentHeader/Header";
 import Footer from "./ComponentFooter/Footer";
 import CadastroNinjas from "./ComponentesNinjas/CadastroNinjas";
@@ -15,6 +16,12 @@ const HomeContainer = styled.div`
   grid-template-rows: 10vh 1fr 10vh;
   height: 100%;
   width: 100vw;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+  background-color: red;
 `;
 
 export default class App extends React.Component {
@@ -31,6 +38,7 @@ export default class App extends React.Component {
             irParaCardAutos={this.irParaCardAutos}
             irParaCardConsultoria={this.irParaCardConsultoria}
             irParaCardDesign={this.irParaCardDesign}
+            irParaCardModaeBeleza={this.irParaCardModaeBeleza}
           />
         );
       case "CardAulas":
@@ -44,6 +52,10 @@ export default class App extends React.Component {
       case "CardDesign":
         return (
           <CardDesign irParaCardsCategorias={this.irParaCardsCategorias} />
+        );
+        case "CardModaeBeleza":
+        return (
+          <CardModaeBeleza irParaCardsCategorias={this.irParaCardsCategorias} />
         );
         case "CadastroNinjas":
         return (
@@ -84,6 +96,10 @@ export default class App extends React.Component {
 
   irParaCardDesign = () => {
     this.setState({ telaAtual: "CardDesign" });
+  };
+
+  irParaCardModaeBeleza = () => {
+    this.setState({ telaAtual: "CardModaeBeleza" });
   };
 
   render() {
