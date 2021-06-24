@@ -9,6 +9,7 @@ import Header from "./ComponentHeader/Header";
 import Footer from "./ComponentFooter/Footer";
 import CadastroNinjas from "./ComponentesNinjas/CadastroNinjas";
 import ServicosNinjas from "./ComponentesNinjas/ServicosNinjas";
+import Carrinho from "./ComponentHeader/Carrinho";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
@@ -57,12 +58,14 @@ export default class App extends React.Component {
         );
         case "CadastroNinjas":
         return (
-          <CadastroNinjas irParaCardsCategorias={this.irParaCardsCategorias}  irParaServicosNinjas={this.irParaServicosNinjas} />
+          <CadastroNinjas irParaCardsCategorias={this.irParaCardsCategorias}  irParaServicosNinjas={this.irParaServicosNinjas}
+          />
         );
         case "ServicosNinjas":
         return (
           <ServicosNinjas  irParaCadastroNinjas={this.irParaCadastroNinjas} />
         );
+        
       default:
         return <div>Erro! Página não encontrada.</div>;
     }
@@ -103,8 +106,10 @@ export default class App extends React.Component {
   render() {
     return (
       <HomeContainer>
+       
         <Header irParaCadastroNinjas={this.irParaCadastroNinjas} />
         {this.escolheTela()}
+        
         <Footer />
       </HomeContainer>
     );

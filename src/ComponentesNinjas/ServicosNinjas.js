@@ -8,10 +8,9 @@ const ContainerServicos = styled.div`
   justify-content: center;
   align-items: center;
   height: 20vw;
-  /* background-color: lavender; */
 
   button {
-    background-color: white;
+    background-color: lavender;
     padding: 14px 20px;
     color: black;
     font-size: 15px;
