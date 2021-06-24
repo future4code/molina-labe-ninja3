@@ -1,197 +1,238 @@
-@media (min-width: 630px) {
-  input {
+@media (min-width: 630px){
+
+
+  input{
     border-radius: 10px;
     border-style: none;
-    box-shadow: 0 2px 5px 0;
+    box-shadow: 0 2px 5px 0 ;
+  
+  }}
+  
+  
+  .toggle,
+  [id^=drop] {
+    display: none;
   }
-}
+  
+  nav { 
+    margin:0;
+    padding: 0;
+    background-color: #d977ff;
+    width: 100%;
 
-.toggle,
-[id^="drop"] {
-  display: none;
-}
-
-nav {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: #d977ff;
-}
-
-#logo {
-  display: block;
-  padding: 10px 20px;
-  float: left;
-  font-size: 20px;
-  line-height: 60px;
-  max-width: 50px;
-  color: white;
-}
-
-nav:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-nav ul {
-  float: right;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-}
-
-nav ul li {
-  margin: 0px;
-  float: left;
-  background-color: #d977ff;
-}
-
-nav a {
-  display: block;
-  padding: 14px 20px;
-  color: rgb(0, 0, 0);
-  font-size: 17px;
-  text-decoration: none;
-}
-
-nav ul li ul li:hover {
-  background: #000000;
-}
-
-nav a:hover {
-  background-color: #000000;
-  color: rgb(255, 255, 255);
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 60px;
-}
-
-nav ul li:hover > ul {
-  display: inherit;
-}
-
-nav ul ul li {
-  width: 170px;
-  float: none;
-  display: list-item;
-  position: relative;
-}
-
-nav ul ul ul li {
-  position: relative;
-  top: -60px;
-  left: 170px;
-}
-
-li > a:after {
-  content: " +";
-}
-li > a:only-child:after {
-  content: "";
-}
-
-@media all and (max-width: 768px) {
-  #tab {
+  }
+  
+  #logo {
+    display: block;
+    padding: 10px 20px;
+    float: left;
+    font-size:20px;
+    line-height: 60px;
+    max-width: 50px;
+    color: white;
+  }
+  
+  
+  
+  
+  nav:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+  
+  
+  nav ul {
+    float: right;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    }
+    
+  nav ul li {
+    margin: 0px;
+    float: left;
+    background-color: #d977ff;
+    }
+  
+  nav a {
+    display:block;
+    padding:14px 20px;	
+    color:rgb(0, 0, 0);
+    font-size:17px;
+    text-decoration:none;
+  }
+  
+  
+  nav ul li ul li:hover { background: #000000; }
+  
+  nav a:hover { 
+    background-color: #000000; 
+    color:rgb(255, 255, 255);
+  
+  }
+  
+  
+  nav ul ul {
+    display: none;
+    position: absolute; 
+    top: 60px; 
+  }
+    
+  nav ul li:hover > ul {
+    display:inherit;
+  }
+    
+  nav ul ul li {
+    width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+  }
+  
+  
+  nav ul ul ul li {
+    position: relative;
+    top:-60px;
+    left:170px; 
+  }
+  
+    
+  li > a:after { content:  ' +'; }
+  li > a:only-child:after { content: ''; }
+  
+  
+  
+  
+  @media all and (max-width : 768px) {
+  
+      #tab{
+      display: flex;
+      justify-content: space-between;
+    
+    }
+  
+    svg:hover {
+      fill: #d977ff
+      }
+      
+      #hamb{
+        display: flex;
+        justify-content: flex-start;
+  width: 40px;
+  height: 40px;
+  }
+  
+  #hambu{
     display: flex;
-    justify-content: space-between;
-  }
-
-  svg:hover {
-    fill: #d977ff;
-  }
-
-  #hamb {
-    display: flex;
-    justify-content: flex-start;
-    width: 40px;
-    height: 40px;
-  }
-
-  #hambu {
-    display: flex;
+  
     align-items: center;
     height: 70px;
   }
-
+  
   #logo {
-    max-height: 40px;
-    align-self: center;
+  max-height: 40px;
+  align-self: center;
   }
-
+  
+  
   nav {
-    margin: 0;
+      margin: 0;
+      width: 100%;
   }
-
-  [id^="drop"]:checked + ul {
-    display: block;
-    position: absolute;
-    top: 70px;
+  
+  
+  .toggle + a,
+  .menu {
+      display: none;
   }
-
+  
+  .toggle {
+      display: block;
+      background-color: #d977ff;
+      padding:14px 20px;	
+      color:#FFF;
+      font-size:17px;
+      text-decoration:none;
+      border:none;
+  }
+  
+  .toggle:hover {
+      background-color: #000000;
+  }
+  
+  [id^=drop]:checked + ul {
+      display: block;
+  position: absolute;
+  top:70px
+  }
+  
   nav ul li {
-    display: block;
-    width: 100%;
-  }
-
+      display: block;
+      width: 100%;
+      }
+  
   nav ul ul .toggle,
   nav ul ul a {
-    padding: 0 40px;
+      padding: 0 40px;
   }
-
+  
   nav ul ul ul a {
-    padding: 0 80px;
+      padding: 0 80px;
   }
-
+  
   nav a:hover,
-  nav ul ul ul a {
-    background-color: #000000;
+   nav ul ul ul a {
+      background-color: #000000;
   }
-
+  
   nav ul li ul li .toggle,
   nav ul ul a,
-  nav ul ul ul a {
-    padding: 14px 20px;
-    color: #fff;
-    font-size: 17px;
+  nav ul ul ul a{
+      padding:14px 20px;	
+      color:#FFF;
+      font-size:17px; 
   }
-
+  
+  
   nav ul li ul li .toggle,
   nav ul ul a {
-    background-color: #212121;
+      background-color: #212121; 
   }
-
+  
   nav ul ul {
-    float: none;
-    position: static;
-    color: #ffffff;
+      float: none;
+      position:static;
+      color: #ffffff;
   }
-
+      
   nav ul ul li:hover > ul,
   nav ul li:hover > ul {
-    display: none;
+      display: none;
   }
-
+      
   nav ul ul li {
-    display: block;
-    width: 100%;
+      display: block;
+      width: 100%;
   }
-
+  
   nav ul ul ul li {
-    position: static;
+      position: static;
+  
   }
-}
-
-@media all and (max-width: 630px) {
-  ul li {
-    display: flex;
-    width: 94%;
+  
+  
   }
-}
-ul {
-  list-style: none;
-}
+  
+  
+  @media all and (max-width : 630px) {
+      ul li {
+      display:flex;
+      width: 94%;
+    }
+  }
+      ul{
+          list-style: none;
+      }
+  

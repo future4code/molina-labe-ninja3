@@ -12,7 +12,6 @@ import ServicosNinjas from "./ComponentesNinjas/ServicosNinjas";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  display: grid;
   grid-template-rows: 10vh 1fr 10vh;
   height: 100%;
   width: 100vw;
