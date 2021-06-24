@@ -14,12 +14,6 @@ const ServicosContainer = styled.div`
   }
 `;
 
-const ImagemAula = styled.img`
-  display: flex;
-  width: 60%;
-  height: 50%;
-`;
-
 export default class ServicosCard2 extends React.Component {
   render() {
     return (

@@ -128,25 +128,6 @@ li > a:only-child:after {
     margin: 0;
   }
 
-  .toggle + a,
-  .menu {
-    display: none;
-  }
-
-  .toggle {
-    display: block;
-    background-color: #d977ff;
-    padding: 14px 20px;
-    color: #fff;
-    font-size: 17px;
-    text-decoration: none;
-    border: none;
-  }
-
-  .toggle:hover {
-    background-color: #000000;
-  }
-
   [id^="drop"]:checked + ul {
     display: block;
     position: absolute;
