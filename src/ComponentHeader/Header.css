@@ -114,7 +114,6 @@ li > a:only-child:after {
 
   #hambu {
     display: flex;
-
     align-items: center;
     height: 70px;
   }

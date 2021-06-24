@@ -4,7 +4,8 @@ import styled from "styled-components";
 const HeaderAutos = styled.div`
   display: flex;
   flex-direction: column;
-  height: 25vh;
+  height: 45vh;
+  padding: 10px;
   justify-content: center;
   align-items: center;
 `;

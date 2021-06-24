@@ -10,12 +10,21 @@ const CardsContainer = styled.div`
   display: flex;
   gap: 30px;
   width: 100vw;
-  height: 100vh;
+  height: 900px;
+  
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+  background-color: salmon;
 
   h2 {
     text-align: center;
     background-color: red;
     height: 30px;
+    justify-content: center;
+    background-color: blue;
   }
 
   img {
@@ -120,7 +129,7 @@ export default class CardsCategorias extends React.Component {
           </ButtonStyle>
         </Card4>
         <Card5>
-          <ButtonStyle>
+          <ButtonStyle onClick={this.props.irParaCardModaeBeleza }>
             <img src={modaebeleza} alt="icone-modaebeleza" />
           </ButtonStyle>
         </Card5>
