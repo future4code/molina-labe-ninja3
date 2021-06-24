@@ -87,6 +87,11 @@ const ButtonStyle = styled.button`
   justify-items: center;
   align-content: center;
   border-radius: 10px;
+  cursor: pointer;
+
+  :hover{
+    background-color: MediumPurple;
+  }
 `;
 
 export default class CardsCategorias extends React.Component {

@@ -6,6 +6,8 @@ import CardConsultoria from "./ComponentsConsultoria/CardConsultoria";
 import CardDesign from "./ComponentsDesign/CardDesign";
 import Header from "./ComponentHeader/Header";
 import Footer from "./ComponentFooter/Footer";
+import CadastroNinjas from "./ComponentesNinjas/CadastroNinjas";
+import ServicosNinjas from "./ComponentesNinjas/ServicosNinjas";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
@@ -43,9 +45,25 @@ export default class App extends React.Component {
         return (
           <CardDesign irParaCardsCategorias={this.irParaCardsCategorias} />
         );
+        case "CadastroNinjas":
+        return (
+          <CadastroNinjas irParaCardsCategorias={this.irParaCardsCategorias}  irParaServicosNinjas={this.irParaServicosNinjas} />
+        );
+        case "ServicosNinjas":
+        return (
+          <ServicosNinjas  irParaCadastroNinjas={this.irParaCadastroNinjas} />
+        );
       default:
         return <div>Erro! Página não encontrada.</div>;
     }
+  };
+
+  irParaServicosNinjas = () => {
+    this.setState({ telaAtual: "ServicosNinjas" });
+  };
+
+  irParaCadastroNinjas = () => {
+    this.setState({ telaAtual: "CadastroNinjas" });
   };
 
   irParaCardsCategorias = () => {
@@ -71,7 +89,7 @@ export default class App extends React.Component {
   render() {
     return (
       <HomeContainer>
-        <Header />
+        <Header irParaCadastroNinjas={this.irParaCadastroNinjas} />
         {this.escolheTela()}
         <Footer />
       </HomeContainer>

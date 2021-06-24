@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import imagemAlarme from "../ImagensCardAutos/imagemAlarme.png";
 
 const ServicosContainer = styled.div`
   display: flex;
@@ -9,12 +8,6 @@ const ServicosContainer = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
-`;
-
-const ImagemAutos = styled.img`
-  display: flex;
-  width: 80%;
-  height: 50%;
 `;
 
 export default class ServicosCard extends React.Component {
