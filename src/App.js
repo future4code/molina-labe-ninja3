@@ -21,7 +21,6 @@ const HomeContainer = styled.div`
   justify-items: center;
   text-align: center;
   align-content: center;
-  background-color: red;
 `;
 
 export default class App extends React.Component {
