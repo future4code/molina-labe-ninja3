@@ -8,7 +8,6 @@ const HeaderDesign = styled.div`
   padding: 10px;
   justify-content: center;
   align-items: center;
-  background-color: red;
 
   h2 {
     text-align: center;
@@ -19,11 +18,28 @@ const HeaderDesign = styled.div`
   }
 `;
 
+const Button =styled.button`
+  background-color: white;
+  padding: 14px 20px;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  :hover {
+    background-color: mediumpurple;
+    color: white;
+  }
+`
+
+
 export default class HeaderCardDesign extends React.Component {
   render() {
     return (
       <HeaderDesign>
-        <button onClick={this.props.irParaCardsCategorias}>HOME</button>
+        <Button onClick={this.props.irParaCardsCategorias}>HOME</Button>
         <h1>Precisando de Profissionais em Design e Tecnologia?</h1>
         <h2>
           Aqui você encontra milhares de profissionais avaliados por clientes,

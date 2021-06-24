@@ -8,7 +8,7 @@ const ContainerCadastro = styled.div`
   justify-content: center;
   justify-items: center;
   align-items: center;
-  height: 40vw;
+  height: 100vh;
   gap: 20px;
 
   button {

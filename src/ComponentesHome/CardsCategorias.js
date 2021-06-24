@@ -7,47 +7,53 @@ import designetecnologia from "./images/designetecnologia.svg";
 import styled from "styled-components";
 
 const CardsContainer = styled.div`
-  display: flex;
-  gap: 30px;
+  display: grid;
   width: 100vw;
-  height: 900px;
-  
+height: 90vh;
   justify-content: center;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
+
   align-content: center;
-  background-color: salmon;
+grid-auto-columns: 1fr;
+grid-template-rows:200px 1fr;
+
 
   h2 {
     text-align: center;
-    background-color: red;
     height: 30px;
     justify-content: center;
-    background-color: blue;
   }
 
   img {
     width: 120px;
+    
+    filter: hue-rotate(240deg) ;
+  
   }
 `;
+
+const CardsContainer2 = styled.div`
+display: flex;
+gap: 30px;
+justify-content: center;
+
+`
+
 const Card1 = styled.div`
   width: 200px;
   height: 180px;
   box-shadow: 5px 5px gray;
   border: 2px solid black;
-  position: relative;
   top: 300px;
   right: 200px;
   border-radius: 10px;
   cursor: pointer;
+  
 `;
 const Card2 = styled.div`
   width: 200px;
   height: 180px;
   box-shadow: 5px 5px gray;
   border: 2px solid black;
-  position: relative;
   top: 300px;
   right: 200px;
   border-radius: 10px;
@@ -58,7 +64,6 @@ const Card3 = styled.div`
   height: 180px;
   box-shadow: 5px 5px gray;
   border: 2px solid black;
-  position: relative;
   top: 300px;
   right: 200px;
   border-radius: 10px;
@@ -69,7 +74,6 @@ const Card4 = styled.div`
   height: 180px;
   box-shadow: 5px 5px gray;
   border: 2px solid black;
-  position: relative;
   top: 300px;
   right: 200px;
   border-radius: 10px;
@@ -80,7 +84,6 @@ const Card5 = styled.div`
   height: 180px;
   box-shadow: 5px 5px gray;
   border: 2px solid black;
-  position: relative;
   top: 300px;
   right: 200px;
   border-radius: 10px;
@@ -101,6 +104,8 @@ const ButtonStyle = styled.button`
   :hover{
     background-color: MediumPurple;
   }
+
+  
 `;
 
 export default class CardsCategorias extends React.Component {
@@ -108,6 +113,7 @@ export default class CardsCategorias extends React.Component {
     return (
       <CardsContainer>
         <h2>Todas as Categorias de Serviços</h2>
+       <CardsContainer2>
         <Card1>
           <ButtonStyle onClick={this.props.irParaCardAulas}>
             <img src={aulas} alt="icone-aulas" />
@@ -133,6 +139,7 @@ export default class CardsCategorias extends React.Component {
             <img src={modaebeleza} alt="icone-modaebeleza" />
           </ButtonStyle>
         </Card5>
+        </CardsContainer2>
       </CardsContainer>
     );
   }

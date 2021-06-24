@@ -60,11 +60,11 @@ const SocialMidia = styled.div`
 `;
 
 const IconSocial = styled.div`
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
+  height: 35px;
+  width: 35px;
+  display: flex block;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
 `;
 
 const Link = styled.a`
@@ -72,7 +72,7 @@ const Link = styled.a`
 `;
 
 const Image = styled.img`
-  height: 45%;
+  height: 35px;
   margin-top: 5%;
 `;
 

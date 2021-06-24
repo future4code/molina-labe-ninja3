@@ -18,12 +18,28 @@ const HeCardModaeBeleza = styled.div`
     
   }
 `;
+const Button =styled.button`
+  background-color: white;
+  padding: 14px 20px;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  :hover {
+    background-color: mediumpurple;
+    color: white;
+  }
+`
+
 
 export default class HeaderCardModaeBeleza extends React.Component {
   render() {
     return (
       <HeCardModaeBeleza>
-        <button onClick={this.props.irParaCardsCategorias}>HOME</button>
+        <Button onClick={this.props.irParaCardsCategorias}>HOME</Button>
         <h1>Precisando de Profissionais em Moda e Beleza?</h1>
         <h2>
           Pois aqui você acaba de encontrar milhares de profissionais avaliados por clientes,
