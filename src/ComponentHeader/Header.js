@@ -1,31 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import ninjas from "./labeninjas2-PNG.png";
 import "./Header.css";
 import styled from "styled-components";
+import carrinho_svg from "./carrinho_svg.svg";
+import Carrinho from "./Carrinho";
 
 const Button = styled.button`
-    display: block;
-    background-color: #d977ff;
-    padding: 14px 20px;
-    color: black;
-    font-size: 17px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-  
-   :hover {
+  display: block;
+  background-color: #d977ff;
+  padding: 14px 20px;
+  color: black;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  :hover {
     background-color: black;
     color: white;
   }
- 
 `;
 
-const ImagemLogo = styled.img`
-    width: 200%;
-    
-`
+const ButtonCarrinho = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 10vw;
+  gap: 10px;
+  background-color: white;
+  padding: 14px 20px;
+  color: black;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
 
+  :hover {
+    background-color: mediumpurple;
+    color: white;
+    height: 20px;
+  }
+`;
+const ImagemLogo = styled.img`
+  width: 200%;
+`;
 class Header extends React.Component {
+  state = {
+    abrirCarrinho: false,
+  };
+
+  ClickCarrinho = () => {
+    this.setState({ abrirCarrinho: !this.state.abrirCarrinho });
+  };
+
   render() {
     return (
       <nav id="hambu">
@@ -51,6 +83,13 @@ class Header extends React.Component {
             <Button onClick={this.props.irParaCadastroNinjas}>
               Seja um Profissional
             </Button>
+          </li>
+          <li>
+            <ButtonCarrinho onClick={this.ClickCarrinho}>
+              <img src={carrinho_svg} alt="icone-carrinho" />
+              Carrinho
+            </ButtonCarrinho>
+            <Carrinho abrirCarrinho={this.state.abrirCarrinho}/>
           </li>
         </ul>
       </nav>
