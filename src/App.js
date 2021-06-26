@@ -1,20 +1,21 @@
 import React from "react";
-import CardAulas from "./ComponentsAulas/CardAulas";
-import CardAutos from "./ComponentsAutos/CardAutos";
+import CardAulas from "./ComponentesHome/ComponentsAulas/CardAulas";
+import CardAutos from "./ComponentesHome/ComponentsAutos/CardAutos";
 import CardsCategorias from "./ComponentesHome/CardsCategorias";
-import CardConsultoria from "./ComponentsConsultoria/CardConsultoria";
-import CardDesign from "./ComponentsDesign/CardDesign";
-import CardModaeBeleza from "./ComponentsModaeBeleza/CardModaeBeleza"
+import CardConsultoria from "./ComponentesHome/ComponentsConsultoria/CardConsultoria";
+import CardDesign from ".//ComponentesHome/ComponentsDesign/CardDesign";
+import CardModaeBeleza from "./ComponentesHome/ComponentsModaeBeleza/CardModaeBeleza";
 import Header from "./ComponentHeader/Header";
 import Footer from "./ComponentFooter/Footer";
 import CadastroNinjas from "./ComponentesNinjas/CadastroNinjas";
 import ServicosNinjas from "./ComponentesNinjas/ServicosNinjas";
 import Carrinho from "./ComponentHeader/Carrinho";
 import styled from "styled-components";
+import DetailPage from "./ComponentesNinjas/DetailPage";
 
 const HomeContainer = styled.div`
-  grid-template-rows: 10vh 1fr 10vh;
-  height: 100%;
+  grid-template-rows: 20vh 1fr 30vh;
+  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,7 @@ const HomeContainer = styled.div`
 export default class App extends React.Component {
   state = {
     telaAtual: "CardsCategorias",
+    jobDetailId: "",
   };
 
   escolheTela = () => {
@@ -52,20 +54,32 @@ export default class App extends React.Component {
         return (
           <CardDesign irParaCardsCategorias={this.irParaCardsCategorias} />
         );
-        case "CardModaeBeleza":
+      case "CardModaeBeleza":
         return (
           <CardModaeBeleza irParaCardsCategorias={this.irParaCardsCategorias} />
         );
-        case "CadastroNinjas":
+      case "CadastroNinjas":
         return (
-          <CadastroNinjas irParaCardsCategorias={this.irParaCardsCategorias}  irParaServicosNinjas={this.irParaServicosNinjas}
+          <CadastroNinjas
+            irParaCardsCategorias={this.irParaCardsCategorias}
+            irParaServicosNinjas={this.irParaServicosNinjas}
           />
         );
-        case "ServicosNinjas":
+      case "ServicosNinjas":
         return (
-          <ServicosNinjas  irParaCadastroNinjas={this.irParaCadastroNinjas} />
+          <ServicosNinjas
+            irParaCadastroNinjas={this.irParaCadastroNinjas}
+            irParaDetailPage={this.irParaDetailPage}
+          />
         );
-        
+      case "detail":
+        return (
+          <DetailPage
+            jobId={this.state.jobDetailId}
+            irParaServicosNinjas={this.irParaServicosNinjas}
+          />
+        );
+
       default:
         return <div>Erro! Página não encontrada.</div>;
     }
@@ -77,6 +91,10 @@ export default class App extends React.Component {
 
   irParaCadastroNinjas = () => {
     this.setState({ telaAtual: "CadastroNinjas" });
+  };
+
+  irParaDetailPage = (jobId) => {
+    this.setState({ telaAtual: "detail", jobDetailId: jobId });
   };
 
   irParaCardsCategorias = () => {
@@ -106,10 +124,8 @@ export default class App extends React.Component {
   render() {
     return (
       <HomeContainer>
-       
         <Header irParaCadastroNinjas={this.irParaCadastroNinjas} />
         {this.escolheTela()}
-        
         <Footer />
       </HomeContainer>
     );

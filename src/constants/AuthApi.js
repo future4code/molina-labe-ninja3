@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../ComponenteBaseApi";
+import { BASE_URL } from "./BASE_API";
 
 export const postAuth = () => {
   const body = {
@@ -15,4 +15,4 @@ export const postAuth = () => {
     });
 };
 
-postAuth()
+postAuth();

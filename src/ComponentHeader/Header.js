@@ -63,7 +63,7 @@ class Header extends React.Component {
       <nav id="hambu">
         <div id="tab">
           <ImagemLogo id="logo" src={ninjas} alt="lagos" />
-          <label for="drop" class="toggle">
+          <label htmlFor="drop" className="toggle">
             <svg id="hamb" viewBox="0 0 100 80" width="40" height="40">
               <rect width="100" height="20" rx="8"></rect>
               <rect y="30" width="100" height="20" rx="8"></rect>
@@ -72,13 +72,7 @@ class Header extends React.Component {
           </label>
         </div>
         <input type="checkbox" id="drop" />
-        <ul class="menu">
-          <li>
-            <Button>Como Funciona</Button>
-          </li>
-          <li>
-            <Button>Entrar</Button>
-          </li>
+        <ul className="menu">
           <li>
             <Button onClick={this.props.irParaCadastroNinjas}>
               Seja um Profissional
@@ -89,7 +83,7 @@ class Header extends React.Component {
               <img src={carrinho_svg} alt="icone-carrinho" />
               Carrinho
             </ButtonCarrinho>
-            <Carrinho abrirCarrinho={this.state.abrirCarrinho}/>
+            <Carrinho abrirCarrinho={this.state.abrirCarrinho} />
           </li>
         </ul>
       </nav>

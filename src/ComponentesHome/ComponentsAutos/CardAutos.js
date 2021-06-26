@@ -14,10 +14,9 @@ export default class CardAutos extends React.Component {
   render() {
     return (
       <CardContainer>
-        <HeaderCardAutos
+        <BodyCardAutos
           irParaCardsCategorias={this.props.irParaCardsCategorias}
         />
-        <BodyCardAutos />
       </CardContainer>
     );
   }

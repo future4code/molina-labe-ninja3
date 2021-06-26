@@ -9,7 +9,7 @@ import styled from "styled-components";
 const CardsContainer = styled.div`
   display: grid;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
 
   align-content: center;
@@ -126,16 +126,12 @@ const InputBusca = styled.div`
       cursor: pointer;
     }
   }
-
-  
 `;
 
 export default class CardsCategorias extends React.Component {
-
-  state ={
-    inputBuscaServicos: ""
-
-  }
+  state = {
+    inputBuscaServicos: "",
+  };
 
   onChangeInputBuscaServicos = (event) => {
     this.setState({ inputBuscaServicos: event.target.value });
@@ -148,9 +144,11 @@ export default class CardsCategorias extends React.Component {
         <InputBusca>
           <label>
             <p>Busque o serviço que você precisa</p>
-            <input value={this.state.inputBuscaServicos} 
-            onChange={this.onChangeInputBuscaServicos} 
-            placeholder="O que você precisa?" />
+            <input
+              value={this.state.inputBuscaServicos}
+              onChange={this.onChangeInputBuscaServicos}
+              placeholder="O que você precisa?"
+            />
             <button>Buscar</button>
           </label>
         </InputBusca>
