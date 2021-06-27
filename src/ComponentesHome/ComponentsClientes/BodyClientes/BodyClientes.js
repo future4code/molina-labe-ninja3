@@ -5,7 +5,6 @@ import PropostasDeServicos from "./PropostasDeServicos";
 const ContainerServicos = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;

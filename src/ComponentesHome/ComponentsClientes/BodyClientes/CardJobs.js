@@ -4,8 +4,8 @@ import { converDate } from "../../../utils/convertDate";
 import add_carrinho from "./add_carrinho.svg";
 
 const CardServico = styled.div`
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  display: flex;
+  flex-direction: column;
   height: 280px;
   border: 3px solid black;
   border-radius: 20px;
@@ -30,9 +30,15 @@ const Add = styled.div`
   background-color: white;
   cursor: pointer;
   margin-top: 10px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
 
   img {
     margin-top: 10px;
+    margin-left: 7px;
+    align-items: center;
+    justify-content: center;
   }
 
   :hover {
