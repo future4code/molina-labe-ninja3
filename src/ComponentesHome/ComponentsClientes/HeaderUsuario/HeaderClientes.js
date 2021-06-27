@@ -38,7 +38,7 @@ export default class HeaderClientes extends React.Component {
   render() {
     return (
       <Container>
-        <Button onClick={this.props.irParaCardsCategoria}>HOME</Button>
+        <Button onClick={this.props.irParaCardsCategorias}>HOME</Button>
         <h2>
           Aqui você encontra milhares de profissionais avaliados por clientes,
           permitindo você negociar apenas com os melhores.

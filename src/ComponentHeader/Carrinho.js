@@ -39,7 +39,7 @@ const JobCard = styled.div`
 `;
 
 const ContainerCarrinho = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   color: white;
   border-radius: 20px;
@@ -62,13 +62,15 @@ const ContainerCarrinho = styled.div`
     font-weight: bold;
     font-size: 14px;
 
-    :hover{
+    :hover {
       background-color: mediumpurple;
       color: white;
     }
   }
+`;
 
-
+const ValorTotal = styled.p`
+  color: black;
 `;
 
 export default class Carrinho extends React.Component {
@@ -100,7 +102,9 @@ export default class Carrinho extends React.Component {
           })}
         </CarrinhoDiv>
 
-        <p>Valor Total: R${this.ValorTotalCompra(this.props)},00</p>
+        <ValorTotal>
+          Valor Total: R${this.ValorTotalCompra(this.props)},00
+        </ValorTotal>
       </ContainerCarrinho>
     );
   }
