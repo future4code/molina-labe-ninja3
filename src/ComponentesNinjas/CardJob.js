@@ -3,10 +3,23 @@ import styled from "styled-components";
 import { converDate } from "../utils/convertDate";
 
 const CardServico = styled.div`
-  height: 250px;
-  border: 2px solid black;
-  margin: 10px;
-  width: 150px;
+display: flex;
+  flex-direction: column;
+  height: 290px;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 5px 5px gray;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    width: 150px;
+    justify-items: center;
+    
+  }
 `;
 
 const CardJob = (props) => {
