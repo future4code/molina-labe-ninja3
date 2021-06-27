@@ -7,10 +7,11 @@ import CardJob from "./CardJob";
 const ContainerGeral = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   height: 100vh;
+  width: 100vw;
 
   button {
     background-color: lavender;

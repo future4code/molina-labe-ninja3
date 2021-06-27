@@ -7,13 +7,14 @@ import FiltroeOrdenamento from "./FiltroeOrdenamento/FiltroeOrdenamento"
 
 const ContainerServicos = styled.div`
   display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows: 500px 300px;
-  height: 150vh;
+  grid-template-columns: 1fr  ;
+  grid-template-rows: 300px 500px 300px;
+  height: 180vh;
   width: 100vw;
   justify-items: center;
   justify-content: center;
   align-items: center;
+
  
 `;
 
@@ -21,7 +22,8 @@ export default class ClientesHome extends React.Component {
   render() {
     return (
       <ContainerServicos>
-        <HeaderClientes />
+        <HeaderClientes
+        irParaCardsCategoria={this.props.irParaCardsCategorias} />
         <PropostasDeServicos
           irParaDetailPageCliente={this.props.irParaDetailPageCliente}
           addCarrinho={this.props.addCarrinho}

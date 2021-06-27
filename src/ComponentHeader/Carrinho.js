@@ -47,16 +47,28 @@ const ContainerCarrinho = styled.div`
   justify-content: center;
   justify-items: center;
   align-items: center;
-  background-color: mediumpurple;
+  background-color: lavender;
 
   button {
-    width: 5vw;
+    width: 6vw;
+    height: 5vh;
     cursor: pointer;
     color: black;
     background-color: white;
     border-radius: 15px;
     border: none;
+    position: relative;
+    bottom: 40px;
+    font-weight: bold;
+    font-size: 14px;
+
+    :hover{
+      background-color: mediumpurple;
+      color: white;
+    }
   }
+
+
 `;
 
 export default class Carrinho extends React.Component {
@@ -73,13 +85,14 @@ export default class Carrinho extends React.Component {
   render() {
     return (
       <ContainerCarrinho>
+        <button onClick={this.props.irParaClientesHome}>Voltar</button>
         <CarrinhoDiv>
           {this.props.carrinho.map((job) => {
             return (
               <JobCard>
                 <p>{job.title}</p>
                 <p>R${job.price},00</p>
-                <button onClick={() => this.props.RemoverJob(job.id)}>
+                <button onClick={() => this.props.RemoverJob(job)}>
                   <img src={delete_lixeira} alt="icone-lixeira" />
                 </button>
               </JobCard>

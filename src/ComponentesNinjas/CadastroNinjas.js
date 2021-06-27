@@ -11,7 +11,13 @@ const ContainerCadastro = styled.div`
   justify-items: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   gap: 20px;
+  background-color: lavender;
+
+ h2{
+  color: mediumpurple;
+ }
 
   button {
     background-color: white;
@@ -27,17 +33,6 @@ const ContainerCadastro = styled.div`
       background-color: mediumpurple;
       color: white;
     }
-  }
-`;
-
-const Categorias = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-
-  input {
-    width: 200px;
-    height: 25px;
   }
 `;
 
@@ -78,10 +73,10 @@ const Pagamento = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-
+ 
   input {
-    width: 200px;
-    height: 25px;
+    width: 100px;
+    height: 10vh;
   }
 `;
 
@@ -89,11 +84,6 @@ const Prazo = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-
-  input {
-    width: 200px;
-    height: 25px;
-  }
 `;
 
 export default class CadastroNinjas extends React.Component {
@@ -162,18 +152,6 @@ export default class CadastroNinjas extends React.Component {
     return (
       <ContainerCadastro>
         <h2>Cadastro de Serviços</h2>
-        {/* <Categorias>
-          Categoria:
-          <select>
-            value={this.state.categoriaServico}
-            onChange={this.onChangeMetodoPagamento}
-            <option>Aulas</option>
-            <option>Autos</option>
-            <option>Consultoria</option>
-            <option>Design e Tecnologia</option>
-            <option>Moda e Beleza</option>
-          </select>
-        </Categorias> */}
         <Titulo>
           Título:
           <input
@@ -204,7 +182,6 @@ export default class CadastroNinjas extends React.Component {
         <Pagamento>
           Método de pagamento
           <select
-            multiple
             value={this.state.paymentMethods}
             onChange={this.onChangeMetodoPagamento}
           >

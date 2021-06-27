@@ -24,6 +24,7 @@ display: flex;
 
 const CardJob = (props) => {
   return (
+    
     <CardServico>
       <h3>{props.job.title}</h3>
       <p>
