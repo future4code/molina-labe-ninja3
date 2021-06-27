@@ -18,21 +18,16 @@
   nav { 
     margin:0;
     padding: 0;
-    background-color: #d977ff;
+    background-color: lavender;
     width: 100vw;
+    height: 10vh;
   }
   
   #logo {
     display: block;
     padding: 10px 20px;
-    float: left;
-    font-size:20px;
-    line-height: 60px;
-    max-width: 50px;
     color: white;
   }
-  
-  
   
   
   nav:after {
@@ -53,7 +48,6 @@
   nav ul li {
     margin: 0px;
     float: left;
-    background-color: #d977ff;
     }
   
   nav a {

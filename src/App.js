@@ -1,10 +1,5 @@
 import React from "react";
-import CardAulas from "./ComponentesHome/ComponentsAulas/CardAulas";
-import CardAutos from "./ComponentesHome/ComponentsAutos/CardAutos";
 import CardsCategorias from "./ComponentesHome/CardsCategorias";
-import CardConsultoria from "./ComponentesHome/ComponentsConsultoria/CardConsultoria";
-import CardDesign from ".//ComponentesHome/ComponentsDesign/CardDesign";
-import CardModaeBeleza from "./ComponentesHome/ComponentsModaeBeleza/CardModaeBeleza";
 import Header from "./ComponentHeader/Header";
 import Footer from "./ComponentFooter/Footer";
 import CadastroNinjas from "./ComponentesNinjas/CadastroNinjas";
@@ -36,32 +31,7 @@ export default class App extends React.Component {
   escolheTela = () => {
     switch (this.state.telaAtual) {
       case "CardsCategorias":
-        return (
-          <CardsCategorias
-            irParaCardAulas={this.irParaCardAulas}
-            irParaCardAutos={this.irParaCardAutos}
-            irParaCardConsultoria={this.irParaCardConsultoria}
-            irParaCardDesign={this.irParaCardDesign}
-            irParaCardModaeBeleza={this.irParaCardModaeBeleza}
-            irParaClientesHome={this.irParaClientesHome}
-          />
-        );
-      case "CardAulas":
-        return <CardAulas irParaCardsCategorias={this.irParaCardsCategorias} />;
-      case "CardAutos":
-        return <CardAutos irParaCardsCategorias={this.irParaCardsCategorias} />;
-      case "CardConsultoria":
-        return (
-          <CardConsultoria irParaCardsCategorias={this.irParaCardsCategorias} />
-        );
-      case "CardDesign":
-        return (
-          <CardDesign irParaCardsCategorias={this.irParaCardsCategorias} />
-        );
-      case "CardModaeBeleza":
-        return (
-          <CardModaeBeleza irParaCardsCategorias={this.irParaCardsCategorias} />
-        );
+        return <CardsCategorias irParaClientesHome={this.irParaClientesHome} />;
       case "CadastroNinjas":
         return (
           <CadastroNinjas
@@ -115,16 +85,19 @@ export default class App extends React.Component {
   };
 
   RemoverJob = (jobARemover) => {
-    const novoCarrinho = this.state.carrinho.filter(
-      (job) => job.id === jobARemover 
-    );
+    const index = this.state.carrinho.findIndex((job) =>  job.id === jobARemover.id )
+    let novoCarrinho = [...this.state.carrinho]
+    novoCarrinho.splice(index, 1)
+
+    console.log("antes da alteração", this.state.carrinho);
     this.setState({ carrinho: novoCarrinho });
-    alert("Serviço removido com sucesso!!")
+    console.log("depois da alteração", this.state.carrinho);
+    alert("Serviço removido com sucesso!!");
   };
 
   addCarrinho = (job) => {
     this.setState({ carrinho: [...this.state.carrinho, job] });
-    alert("Serviço adicionado com sucesso!!")
+    alert("Serviço adicionado com sucesso!!");
   };
   irParaCarrinho = () => {
     this.setState({ telaAtual: "Carrinho" });
@@ -154,31 +127,12 @@ export default class App extends React.Component {
     this.setState({ telaAtual: "CardsCategorias" });
   };
 
-  irParaCardAulas = () => {
-    this.setState({ telaAtual: "CardAulas" });
-  };
-
-  irParaCardAutos = () => {
-    this.setState({ telaAtual: "CardAutos" });
-  };
-
-  irParaCardConsultoria = () => {
-    this.setState({ telaAtual: "CardConsultoria" });
-  };
-
-  irParaCardDesign = () => {
-    this.setState({ telaAtual: "CardDesign" });
-  };
-
-  irParaCardModaeBeleza = () => {
-    this.setState({ telaAtual: "CardModaeBeleza" });
-  };
-
   render() {
     console.log("ListaNoCarrinho", this.state.carrinho);
     return (
       <HomeContainer>
         <Header
+          irParaCardsCategorias={this.irParaCardsCategorias}
           irParaCadastroNinjas={this.irParaCadastroNinjas}
           irParaCarrinho={this.irParaCarrinho}
           carrinho={this.state.carrinho}

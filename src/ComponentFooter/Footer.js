@@ -10,6 +10,7 @@ const Container = styled.div`
   width: 100vw;
   justify-content: center;
   background-color: #f8f8f8;
+  
 `;
 
 const Main = styled.div`
@@ -32,6 +33,7 @@ const Title = styled.h1`
   font-size: 1.5rem;
   color: black;
   margin-bottom: 2%;
+  color: mediumpurple;
 `;
 
 const Text = styled.p`
@@ -51,6 +53,7 @@ const TextContact = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  
 `;
 
 const SocialMidia = styled.div`
