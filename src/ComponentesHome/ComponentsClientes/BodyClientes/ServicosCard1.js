@@ -7,9 +7,6 @@ import CardJobs from "./CardJobs";
 const ContainerGeral = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   width: 100vw;
 
   button {
@@ -30,13 +27,10 @@ const ContainerGeral = styled.div`
 `;
 
 const ContainerServicos = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-direction: row;
   margin: 10px;
-  height: 100vh;
   width: 75vw;
-  justify-content: center;
-  align-items: center;
 `;
 
 const ContainerFilter = styled.div`

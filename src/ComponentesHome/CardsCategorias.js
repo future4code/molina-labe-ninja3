@@ -12,16 +12,9 @@ const CardsContainer = styled.div`
   grid-auto-columns: 1fr;
   grid-template-rows: 200px 200px 90px;
 
-  h2 {
-    text-align: center;
-    height: 30px;
-    justify-content: center;
-  }
-
   img {
     width: 300px;
     height: 300px;
-    /* filter: hue-rotate(240deg); */
   }
 `;
 
@@ -37,9 +30,6 @@ const CardsContainer2 = styled.div`
 const Card1 = styled.div`
   width: 250px;
   height: 220px;
-  /* box-shadow: 5px 5px gray;
-  border: 2px solid black;
-  border-radius: 10px; */
   top: 300px;
   right: 200px;
 `;

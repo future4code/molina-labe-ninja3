@@ -11,14 +11,10 @@ import DetailPageCliente from "./ComponentesHome/ComponentsClientes/DetailPageCl
 import ClientesHome from "./ComponentesHome/ComponentsClientes/ClientesHome";
 
 const HomeContainer = styled.div`
-  grid-template-rows: 20vh 1fr 30vh;
   height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  justify-items: center;
-  text-align: center;
-  align-content: center;
 `;
 
 export default class App extends React.Component {
@@ -85,9 +81,11 @@ export default class App extends React.Component {
   };
 
   RemoverJob = (jobARemover) => {
-    const index = this.state.carrinho.findIndex((job) =>  job.id === jobARemover.id )
-    let novoCarrinho = [...this.state.carrinho]
-    novoCarrinho.splice(index, 1)
+    const index = this.state.carrinho.findIndex(
+      (job) => job.id === jobARemover.id
+    );
+    let novoCarrinho = [...this.state.carrinho];
+    novoCarrinho.splice(index, 1);
 
     console.log("antes da alteração", this.state.carrinho);
     this.setState({ carrinho: novoCarrinho });
