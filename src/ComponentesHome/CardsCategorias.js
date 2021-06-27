@@ -11,10 +11,10 @@ const CardsContainer = styled.div`
   width: 100vw;
   height: 100vh;
   justify-content: center;
-
   align-content: center;
+  justify-items: center;
   grid-auto-columns: 1fr;
-  grid-template-rows: 100px 200px 200px;
+  grid-template-rows: 200px 200px 90px;
 
   h2 {
     text-align: center;
@@ -33,6 +33,8 @@ const CardsContainer2 = styled.div`
   display: flex;
   gap: 30px;
   justify-content: center;
+  align-items: center;
+  
 `;
 
 const Card1 = styled.div`
@@ -102,56 +104,36 @@ const ButtonStyle = styled.button`
   }
 `;
 
-const InputBusca = styled.div`
+const ButtonContratar = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  justify-items: center;
+  background-color: lavender;
+  padding: 14px 20px;
+  color: mediumpurple;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  width: 15vw;
+  height: 5vh;
+  align-items: center;
+  border: none;
+  cursor: pointer;
 
-  input {
-    width: 30vw;
-    height: 5vh;
-  }
-
-  button {
-    width: 5vw;
-    height: 6vh;
-    border: none;
-    border-radius: 15px;
-    margin-left: 10px;
-
-    :hover {
-      background-color: mediumpurple;
-      color: white;
-      cursor: pointer;
-    }
+  :hover {
+    background-color: mediumpurple;
+    color: white;
   }
 `;
 
-export default class CardsCategorias extends React.Component {
-  state = {
-    inputBuscaServicos: "",
-  };
 
-  onChangeInputBuscaServicos = (event) => {
-    this.setState({ inputBuscaServicos: event.target.value });
-  };
+export default class CardsCategorias extends React.Component {
+ 
 
   render() {
     return (
       <CardsContainer>
-        <h2>Todas as Categorias de Serviços</h2>
-        <InputBusca>
-          <label>
-            <p>Busque o serviço que você precisa</p>
-            <input
-              value={this.state.inputBuscaServicos}
-              onChange={this.onChangeInputBuscaServicos}
-              placeholder="O que você precisa?"
-            />
-            <button>Buscar</button>
-          </label>
-        </InputBusca>
+        <ButtonContratar onClick={this.props.irParaClientesHome}> Quero Contratar um Ninja </ButtonContratar>
         <CardsContainer2>
           <Card1>
             <ButtonStyle onClick={this.props.irParaCardAulas}>

@@ -50,14 +50,6 @@ const ImagemLogo = styled.img`
   width: 200%;
 `;
 class Header extends React.Component {
-  state = {
-    abrirCarrinho: false,
-  };
-
-  ClickCarrinho = () => {
-    this.setState({ abrirCarrinho: !this.state.abrirCarrinho });
-  };
-
   render() {
     return (
       <nav id="hambu">
@@ -79,11 +71,11 @@ class Header extends React.Component {
             </Button>
           </li>
           <li>
-            <ButtonCarrinho onClick={this.ClickCarrinho}>
+            <ButtonCarrinho onClick={this.props.irParaCarrinho}>
               <img src={carrinho_svg} alt="icone-carrinho" />
               Carrinho
+              <p>({this.props.carrinho.length})</p>
             </ButtonCarrinho>
-            <Carrinho abrirCarrinho={this.state.abrirCarrinho} />
           </li>
         </ul>
       </nav>
