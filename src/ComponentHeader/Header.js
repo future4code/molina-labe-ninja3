@@ -76,11 +76,11 @@ const ContainerLogo = styled.div`
   img {
     position: relative;
     right: 10px;
-    height: 150px;
+    height: 120px;
   }
 
   button {
-    width: 150px;
+    width: 120px;
     border: none;
     background-color: lavender;
     cursor: pointer;
