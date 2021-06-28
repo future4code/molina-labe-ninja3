@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import logo from "./logo.png";
-import "./Header.css";
 import styled from "styled-components";
 import carrinho_svg from "./carrinho_svg.svg";
+
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 20vh;
+  background-color: lavender;
+  align-items: center;
+`;
+
+const BotoesContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 50vw;
+  margin-right: 40px;
+`;
 
 const ButtonNinja = styled.button`
   display: flex;
@@ -16,11 +31,10 @@ const ButtonNinja = styled.button`
   align-items: center;
   height: 48px;
   border-radius: 20px;
-  margin-right: 20px;
   font-weight: bold;
   background-color: white;
   position: relative;
-  bottom: 60px;
+  margin-right: 20px;
 
   :hover {
     background-color: mediumpurple;
@@ -43,11 +57,9 @@ const ButtonCarrinho = styled.div`
   border: none;
   cursor: pointer;
   border-radius: 20px;
-  margin-right: 20px;
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 60px;
 
   :hover {
     background-color: mediumpurple;
@@ -58,20 +70,21 @@ const ButtonCarrinho = styled.div`
 
 const ContainerLogo = styled.div`
   display: flex;
+  width: 50vw;
+  justify-content: center;
 
   img {
     position: relative;
     right: 10px;
-    height: 45px;
+    height: 150px;
   }
 
   button {
-    width: 5vw;
+    width: 150px;
     border: none;
     background-color: lavender;
     cursor: pointer;
     position: relative;
-    left: 30px;
 
     :hover {
       background-color: whitesmoke;
@@ -83,27 +96,23 @@ const ContainerLogo = styled.div`
 class Header extends React.Component {
   render() {
     return (
-      <nav id="hambu">
+      <HeaderContainer>
         <ContainerLogo id="tab">
           <button onClick={this.props.irParaCardsCategorias}>
-            <img id="logo" src={logo} alt="lago" />
+            <img src={logo} alt="logo" />
           </button>
         </ContainerLogo>
-        <ul className="menu">
-          <li>
-            <ButtonNinja onClick={this.props.irParaCadastroNinjas}>
-              Seja um Profissional
-            </ButtonNinja>
-          </li>
-          <li>
-            <ButtonCarrinho onClick={this.props.irParaCarrinho}>
-              <img src={carrinho_svg} alt="icone-carrinho" />
-              Carrinho
-              <p>({this.props.carrinho.length})</p>
-            </ButtonCarrinho>
-          </li>
-        </ul>
-      </nav>
+        <BotoesContainer>
+          <ButtonNinja onClick={this.props.irParaCadastroNinjas}>
+            Seja um Profissional
+          </ButtonNinja>
+          <ButtonCarrinho onClick={this.props.irParaCarrinho}>
+            <img src={carrinho_svg} alt="icone-carrinho" />
+            Carrinho
+            <p>({this.props.carrinho.length})</p>
+          </ButtonCarrinho>
+        </BotoesContainer>
+      </HeaderContainer>
     );
   }
 }

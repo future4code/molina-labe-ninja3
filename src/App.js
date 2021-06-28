@@ -11,7 +11,6 @@ import DetailPageCliente from "./ComponentesHome/ComponentsClientes/DetailPageCl
 import ClientesHome from "./ComponentesHome/ComponentsClientes/ClientesHome";
 
 const HomeContainer = styled.div`
-  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;

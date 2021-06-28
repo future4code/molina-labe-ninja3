@@ -61,8 +61,7 @@ export default class CardsCategorias extends React.Component {
     return (
       <CardsContainer>
         <ButtonContratar onClick={this.props.irParaClientesHome}>
-          {" "}
-          Quero Contratar um Ninja{" "}
+          Quero Contratar um Ninja
         </ButtonContratar>
         <CardsContainer2>
           <Card1>
