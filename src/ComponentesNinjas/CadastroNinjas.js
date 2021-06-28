@@ -10,17 +10,17 @@ const ContainerCadastro = styled.div`
   justify-content: center;
   justify-items: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   gap: 20px;
-  background-color: lavender;
+  background-color: white;
 
- h2{
-  color: mediumpurple;
- }
+  h2 {
+    color: mediumpurple;
+  }
 
   button {
-    background-color: white;
+    background-color: lavender;
     padding: 14px 20px;
     color: black;
     font-size: 15px;
@@ -73,7 +73,7 @@ const Pagamento = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
- 
+
   input {
     width: 100px;
     height: 10vh;
